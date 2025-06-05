@@ -58,7 +58,10 @@ p {
 }
 
 video {
-  width: 100vw;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .mascara {
@@ -112,6 +115,9 @@ video {
   padding: 20px;
   border-radius: 5px;
   gap: 20px;
+  top: 30%;
+  left: -300px;
+  transition: left 1s ease-in-out;
 }
 
 input {
@@ -129,4 +135,54 @@ textarea {
   border: 1px solid grey;
   padding-left: 5px;
   outline-color: #18D80F;
+}
+
+.mascara-formulario {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+  transition: visibility 1s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+ 
+  p {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+  }
+
+  .caixa-principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .imagem-mario-luigi {
+    margin-top: 30px;
+    width: 80vw;
+    height: auto;
+  }
+
+  .header {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+  .header img {
+    display: none;
+  }
+
+   .header a {
+    font-size: 15px; 
+  }
 }
